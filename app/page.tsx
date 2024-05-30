@@ -9,6 +9,7 @@ export default async function Home() {
 
   return (
     <main className="bg-white h-full">
+      <h1>Hello CoP</h1>
       <UploadForm />
       {await Promise.all(invoices.map(async (invoice) => { 
         const file = await fs.readFile(`./public${invoice}.json`,'utf-8');
